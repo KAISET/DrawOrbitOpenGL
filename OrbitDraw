@@ -1,0 +1,11 @@
+void DrawOrbit (float x)
+{
+	glBegin(GL_LINE_STRIP);
+	glColor3f(1, 1, 1);
+	glLineWidth(10);
+	for (int i = 0; i < 361; i++)
+	{
+		glVertex3f(x * (float)sin(i * 3.141516 / 180), 0, x * (float)cos(i * 3.141516 / 180));
+	}
+	glEnd();
+}
